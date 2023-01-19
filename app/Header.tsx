@@ -1,6 +1,8 @@
 
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import Link from 'next/link';
+import NavLinks from './NavLinks';
+import SearchBox from './SearchBox';
 ////npm install @heroicons/react
 
 
@@ -14,9 +16,14 @@ function Header() {
                 <Bars3Icon className="h-8 w-8 cursor-pointer" />
                 {/*cursor logo*/}
                 <Link href="/" prefetch={false} >
-                    <h1>The NEWBEETOMATO News</h1>
+                    <h1 className='font-serif text-4xl text-center'>The{" "}
+                        <span className='underline decoration-6 decoration-green-500'> NEWBEETOMATO</span>
+                        {" "}News
+                    </h1>
+
                 </Link>
-                <div className='flex-items-center justify-end space-x-2'>
+                <div className='flex items-center justify-end space-x-2'>
+                     {/* Dark Mode button */}
                     {/*sağa doğru iktiricek justify end */}
 
                     <button className='hidden md:inline bg-slate-900 text-white
@@ -26,6 +33,12 @@ function Header() {
                     </button>
                 </div>
             </div>
+
+             {/*Nav links*/}
+            <NavLinks/>
+             
+             <SearchBox/>
+        
         </header>
     );
 }

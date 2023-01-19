@@ -1,8 +1,10 @@
 import React from 'react'
-//rfce
-function Homepage() {
+//rfce 
+//bu bir sever component olduğu için async yapabiliyormuş
+async function Homepage() {
+  
   return (
-    <div>Homepage</div>
+    <div>Homepage</div> 
   ) 
 }
 
