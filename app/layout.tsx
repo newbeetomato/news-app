@@ -12,9 +12,8 @@ export default function RootLayout({
       <body className='bg-gray-100 dark:bg-zinc-900 transition-all duration-700'>
         {/* 700ms gecikme gece gündüz modu*/}
         <Header />
-        <div className='max-w-6xl mx-auto'// childların genişliğinin ayarladı 
-        >{children}</div>
+        <div className='max-w-6xl mx-auto'>{children}</div>{/* childların genişliğinin ayarladı */}
       </body>
     </html>
-  )
+  );
 }

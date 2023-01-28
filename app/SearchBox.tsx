@@ -28,12 +28,12 @@ function SearchBox() {//1.5
                 // sanki yazıyorsun refreshliyor
                 placeholder="Search Keywords..."
                 className="w-full h-14 rounded-sm placeholder-gray-500 text-gray-400 outline-none flex-1 bg-transparent
-                dark:text-orange-400"
+                dark:text-green-400"
             />
 
             <button type="submit"//2
                 disabled={!input} //input yoksa butonu kapat
-                className="text-orange-400 disabled:text-gray-400"
+                className="text-orange-300 disabled:text-gray-400"
             >Search
             </button>
         </form>
