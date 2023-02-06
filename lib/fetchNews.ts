@@ -9,38 +9,33 @@ const fetchNews = async (
 ) => {
   //graphQl query stepzen sitesinden aldık geldik yavrum it means String!  değer gerekli
   const query = gql`
-    query MyQuery(
-      $access_key: String!
-      $categories: String!
-      $keywords: String
+  query MyQuery {
+    myQuery(
+      access_key: "9df36a6494e26279b0b8a0933e63a495"
+      countries: "tr,gb"
+      sort: "published_desc"
     ) {
-      myQuery(
-        access_key: "9df36a6494e26279b0b8a0933e63a495"
-        categories: $categories
-        countries: "gb"
-        sort: "published_desc"
-        keywords: $keywords
-      ) {
-        data {
-          author
-          category
-          country
-          description
-          image
-          language
-          published_at
-          source
-          title
-          url
-        }
-        pagination {
-          count
-          limit
-          offset
-          total
-        }
+      data {
+        author
+        category
+        country
+        description
+        image
+        language
+        published_at
+        source
+        title
+        url
+      }
+      pagination {
+        count
+        limit
+        offset
+        total
       }
     }
+  }
+
   `;
   // fetch fonksiyonu with next js 13 cathing`
   const res = await fetch(
