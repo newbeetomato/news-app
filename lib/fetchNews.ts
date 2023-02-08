@@ -8,6 +8,7 @@ const fetchNews = async (
   isDynamic?: boolean //belli aralıklaralacathing işlemi yapıcak onu kontrol etmek için
 ) => {
   //graphQl query stepzen sitesinden aldık geldik yavrum it means String!  değer gerekli
+  // yedek api 64ec848b9fa9844843c780b4f0c04c0f
   const query = gql`
   query MyQuery {
     myQuery(
